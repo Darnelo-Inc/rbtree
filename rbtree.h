@@ -12,8 +12,10 @@ typedef struct RBTree {
   struct RBTree *parent;
 } RBTree;
 
-RBTree* rbtree_create_null(int key, int value);
-RBTree* rbtree_create_node(RBTree* node, int key, int value);
+RBTree* rbtree_create_node(int key, int value);
 void rbtree_print(RBTree* node, int depth);
+bool nodeExists(RBTree* node);
+void rbtree_balance(RBTree* node);
+RBTree* rbtree_insert(RBTree* root, int key, int value);
 
 #endif
