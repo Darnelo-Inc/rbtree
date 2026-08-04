@@ -12,5 +12,15 @@ main.o: main.c rbtree.h
 rbtree.o: rbtree.c rbtree.h
 	$(CC) $(CFLAGS) -c rbtree.c
 
+# ── Test target ──────────────────────────────────────────────────
+test_rbtree: test_rbtree.o rbtree.o
+	$(CC) $(CFLAGS) -o test_rbtree test_rbtree.o rbtree.o
+
+test_rbtree.o: test_rbtree.c rbtree.h
+	$(CC) $(CFLAGS) -c test_rbtree.c
+
+test: test_rbtree
+	./test_rbtree
+
 clean:
-	rm -f main main.o rbtree.o
+	rm -f main main.o rbtree.o test_rbtree test_rbtree.o
