@@ -5,21 +5,18 @@
 int main(void) {
   RBTree* root = NULL;
 
-  root = rbtree_insert(root, 50, 500);
-  root = rbtree_insert(root, 25, 250);
-  root = rbtree_insert(root, 75, 750);
-  root = rbtree_insert(root, 10, 100);
-  root = rbtree_insert(root, 35, 350);
-  root = rbtree_insert(root, 60, 600);
-  root = rbtree_insert(root, 90, 900);
-  root = rbtree_insert(root, 5, 50);
-  root = rbtree_insert(root, 15, 150);
-  root = rbtree_insert(root, 30, 300);
-  root = rbtree_insert(root, 40, 400);
-  root = rbtree_insert(root, 55, 550);
-  root = rbtree_insert(root, 70, 700);
-  root = rbtree_insert(root, 85, 850);
+  /* Asymmetric insertion order: heavy on the right side, sparse on the left. */
+  root = rbtree_insert(root,  3,  30);
+  root = rbtree_insert(root, 17, 170);
+  root = rbtree_insert(root, 42, 420);
+  root = rbtree_insert(root, 58, 580);
+  root = rbtree_insert(root, 61, 610);
+  root = rbtree_insert(root, 73, 730);
+  root = rbtree_insert(root,  9,  90);
+  root = rbtree_insert(root, 88, 880);
   root = rbtree_insert(root, 95, 950);
+  root = rbtree_insert(root, 79, 790);
+  root = rbtree_insert(root, 66, 660);
 
   rbtree_print(root, 0);
 
