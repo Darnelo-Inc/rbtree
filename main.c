@@ -5,7 +5,6 @@
 int main(void) {
   RBTree* root = NULL;
 
-  /* Asymmetric insertion order: heavy on the right side, sparse on the left. */
   root = rbtree_insert(root,  3,  30);
   root = rbtree_insert(root, 17, 170);
   root = rbtree_insert(root, 42, 420);
@@ -18,6 +17,19 @@ int main(void) {
   root = rbtree_insert(root, 79, 790);
   root = rbtree_insert(root, 66, 660);
 
+  printf("=== after insert ===\n");
+  rbtree_print(root, 0);
+
+  root = rbtree_remove(root, 42);
+  printf("\n=== after remove(42) ===\n");
+  rbtree_print(root, 0);
+
+  root = rbtree_remove(root, 73);
+  printf("\n=== after remove(73) ===\n");
+  rbtree_print(root, 0);
+
+  root = rbtree_insert(root, 73, 730);
+  printf("\n=== after insert(73) ===\n");
   rbtree_print(root, 0);
 
   return 0;

@@ -17,5 +17,7 @@ void rbtree_print(RBTree* node, int depth);
 bool nodeExists(RBTree* node);
 void rbtree_balance(RBTree* node);
 RBTree* rbtree_insert(RBTree* root, int key, int value);
+RBTree* rbtree_search(RBTree* root, int key);
+RBTree* rbtree_remove(RBTree* root, int key);
 
 #endif
